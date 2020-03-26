@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Szymon Koziol</title>
+    
+</head>
+
+<body>    
+    
+
+<div class="container">
+    
+    <label>
+        <h3>Uzupełnij dane:</h3>
+    </label>
+    <div class="row">
+        <div class="col-sm-12 col-md-9 col-lg-7 col-xl-5">
+            <form>
+                <div class="form-group">
+                    <label for="inputName">Imię:</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Podaj imię">
+                </div>
+
+                <div class="form-group">
+                    <label for="inputSurname">Nazwisko:</label>
+                    <input type="text" class="form-control" id="inputSurname" placeholder="Podaj nazwisko">
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail">Email:</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Podaj email">
+                </div>
+
+                <div class="form-group">
+                    <label class="radio-inline control-label">Płeć:</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioGender" id="man" value="1">
+                        <label class="form-check-label" for="man">Mężczyzna</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioGender" id="woman" value="2">
+                        <label class="form-check-label" for="woman">Kobieta</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">Opis:</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="age">Wiek: </label>
+                    <select id="age">
+                        <option selected>Wybierz...</option>
+                        <script language="javascript" type="text/javascript">
+
+                for(let i=18;i<100;i++)
+                {
+                    document.write("<option>"+i+"</option>");
+                }
+
+
+                        </script>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="maritalStatus">Stan cywilny:</label>
+                    <select id="maritalStatus">
+                        <option selected>Wybierz...</option>
+                        <option>Panna/Kawaler</option>
+                        <option>Mężatka/Żonaty</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Wyślij</button>
+                <button type="reset" class="btn btn-secondary">Wyczyść</button>
+
+            </form>
+        </div>
+        <div class="col-3">
+            <h3>Szybki kontakt</h3>
+            <i class="fa fa-facebook-official fa-4x" aria-hidden="true"></i>
+            <i class="fa fa-instagram fa-4x" aria-hidden="true"></i>
+        </div>
+
+    </div>
+
+    <div class="scroll">
+        <button class="btn btn-success">
+           <i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Do góry
+        </button>
+     </div>
+
+    <footer class="center">
+        <span>Copyrights & copy; Szymon Kozioł | 2020</span>
+    </footer>
+</div>
+
+</body>
+</html>

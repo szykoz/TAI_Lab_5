@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #B2EBF2;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+.container {
+    margin-top: 50px;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+.buttons {
+    padding: 10px 10px 10px 0;
+}
+
+
+nav {
+    background-color: #00796B;
+    
+}
+
+.correct {
+    background-color: #289a27;
+  }
+  
+  .incorrect {
+    background-color: #c41a21;
+  }
+
+.center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+a {
+    color: white;
+    
+}
+
+.scroll {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+}

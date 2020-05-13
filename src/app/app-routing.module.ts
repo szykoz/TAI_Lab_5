@@ -5,6 +5,7 @@ import { ContactComponent } from "./components/contact/contact.component";
 import { BlogComponent } from "./components/blog/blog.component";
 import {BlogItemDetailsComponent} from "./components/blog-item-details/blog-item-details.component";
 import {BlogHomeComponent} from "./components/blog-home/blog-home.component";
+import {AddPostComponent} from "./components/add-post/add-post.component";
 
 
 const routes: Routes = [
@@ -23,7 +24,12 @@ const routes: Routes = [
   {
     path: 'blog/detail/:id',
     component: BlogItemDetailsComponent
-  }];
+  },
+  {
+    path: 'add-post', 
+    component: AddPostComponent
+  }
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

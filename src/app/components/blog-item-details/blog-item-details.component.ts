@@ -9,8 +9,8 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class BlogItemDetailsComponent implements OnInit {
 
-  public url = '';
-  public content: string;
+  public image = '';
+  public text: string;
   public id: number;
 
 
@@ -24,8 +24,8 @@ export class BlogItemDetailsComponent implements OnInit {
     });
 
     this.dataService.getById(id).subscribe(res => {
-      this.url = res['url'];
-      this.content = res['content']
+      this.image = res['url'];
+      this.text = res['content']
     });
   }
 }

@@ -11,10 +11,11 @@ function create(context) {
   }
 
   async function get(id) {
-    let result = await postDAO.get(id);
-    if (result) {
-      return result;
-    }
+    return PostModel.findOne({_id: id}).then(function (result) {
+      if (result) {
+        return mongoConverter(result);
+      }
+    });
   }
 
   async function createNewOrUpdate(data) {
@@ -22,6 +23,14 @@ function create(context) {
     if (result) {
       return result;
     }
+  }
+
+  async function search(content) {
+    return PostModel.find(content).then(function (result) {
+      if (result) {
+        return mongoConverter(result);
+      }
+    });
   }
 
   return {

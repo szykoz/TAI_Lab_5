@@ -25,7 +25,7 @@ export class BlogItemDetailsComponent implements OnInit {
 
     this.dataService.getById(id).subscribe(res => {
       this.image = res['url'];
-      this.text = res['content']
+      this.text = res['content'];
     });
   }
 }

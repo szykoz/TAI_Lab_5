@@ -21,6 +21,12 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { TextFormatDirective } from './directives/text-format.directive';
 import { SelectizeComponent } from './components/selectize/selectize.component';
 import { AddPostComponent } from './components/add-post/add-post.component';
+import { AuthService } from './services/auth.service';
+import { AuthGuard } from "./services/auth.guard";
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { AuthInterceptor } from './services/auth.interceptor';
+import { HTTP_INTERCEPTORS} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,15 +45,22 @@ import { AddPostComponent } from './components/add-post/add-post.component';
     FilterPipe,
     TextFormatDirective,
     SelectizeComponent,
-    AddPostComponent
+    AddPostComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 	  HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [DataService],
+  providers: [DataService, AuthGuard, AuthService,  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }
+],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
